@@ -1,0 +1,30 @@
+name: "錯誤回報"
+description: "回報機器人的錯誤"
+labels: [bug]
+body:
+  - type: textarea
+    attributes:
+      label: "簡單地描述錯誤"
+      description: "描述發生的錯誤"
+      placeholder: "EmbedFix 又壞掉了！"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: "重現步驟"
+      description: "如何重現這個錯誤？"
+      placeholder: "* 輸入一個推文連結"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: "可能的錯誤原因"
+      description: "如果你知道可能的錯誤原因，可以寫在這裡"
+    validations:
+      required: false
+  - type: checkboxes
+    attributes:
+      label: "這個錯誤尚未被回報"
+      options:
+        - label: "我已經看過所有已回報的錯誤且這個錯誤尚未被回報。"
+          required: true
